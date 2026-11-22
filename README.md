@@ -10,17 +10,17 @@ A Flutter journaling app that analyzes the mood of each entry with Google Gemini
 - Local caching of entries
 
 ## Tech stack
-Flutter · Firebase (Auth, Firestore) · Google Gemini API · Provider-style state management
+Flutter · Firebase (Auth, Firestore) · Google Gemini API · Riverpod
 
 ## Setup
 
-1. Install [Flutter](https://docs.flutter.dev/get-started/install) and run `flutter pub get`.
+1. Install [Flutter](https://docs.flutter.dev/get-started/install), then `cd sentiment_journal` and run `flutter pub get`.
 2. Create your own Firebase project and generate the config (this repo does not include it):
    ```
    dart pub global activate flutterfire_cli
    flutterfire configure
    ```
-   This creates `lib/firebase_options.dart`, `firebase.json` and `android/app/google-services.json`.
+   This creates `sentiment_journal/lib/firebase_options.dart`, `firebase.json` and `android/app/google-services.json`.
 3. Get a Gemini API key from [Google AI Studio](https://aistudio.google.com/) and pass it at run time:
    ```
    flutter run --dart-define=GEMINI_API_KEY=your_key
